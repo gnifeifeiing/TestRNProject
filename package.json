@@ -1,0 +1,30 @@
+{
+  "name": "TestProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "test": "jest",
+    "bundle-Android": "React-native bundle –platform android –dev false –entry-file index.android.js –bundle-output android/app/src/main/assets/index.android.bundle –sourcemap-output android/app/src/main/assets/index.android.map –assets-dest android/app/src/main/res/",
+    "bundle-ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file index.ios.js  --platform ios --dev false --bundle-output ./ios/bundle/index.ios.jsbundle --assets-dest ./ios/bundle"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.43.2",
+    "react-native-barcodescanner": "^3.1.1",
+    "react-native-tab-navigator": "^0.3.3",
+    "react-native-xtabbar": "^0.2.1",
+    "realm": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "19.0.2",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
